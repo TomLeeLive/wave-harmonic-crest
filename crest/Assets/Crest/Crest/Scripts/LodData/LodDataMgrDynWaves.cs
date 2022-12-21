@@ -97,6 +97,7 @@ namespace Crest
             simMaterial.SetFloat(sp_Gravity, OceanRenderer.Instance.Gravity * Settings._gravityMultiplier);
             simMaterial.SetFloat(sp_CourantNumber, Settings._courantNumber);
             simMaterial.SetFloat(sp_AttenuationInShallows, Settings._attenuationInShallows);
+            simMaterial.SetFloat(Shader.PropertyToID("_WaveStrength"), Settings._waveStrength);
             simMaterial.SetVector(OceanRenderer.sp_oceanCenterPosWorld, OceanRenderer.Instance.Root.position);
 
             // assign sea floor depth - to slot 1 current frame data. minor bug here - this depth will actually be from the previous frame,
